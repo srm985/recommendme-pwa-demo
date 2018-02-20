@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>RecommendMe</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-img class="hero" src="/assets/imgs/demo-merchant.jpg"></ion-img>
+  <div class="merchant-header" padding-horizontal>
+    <p>Beatrix</p>
+    <div class="like-count">
+      <ion-icon name="heart" color="primary"></ion-icon>
+      <ion-badge>99</ion-badge>
+    </div>
+    <p>New American Restaurant</p>
+    <p>
+      <ion-icon name="navigate"></ion-icon>&nbsp;
+      <a>519 N Clark St, Chicago, IL - 0.4 mi</a>
+    </p>
+    <p>
+      <ion-icon name="link"></ion-icon>&nbsp;
+      <a>www.beatrixchicago.com</a>
+    </p>
+  </div>
+  <div class="social-actions" padding-vertical>
+    <div>
+      <div (click)="recommendMerchant()">
+        <p>
+          <ion-icon name="ios-heart-outline"></ion-icon>
+        </p>
+        <p>Recommend</p>
+      </div>
+    </div>
+    <div>
+      <div (click)="saveMerchant()">
+        <p>
+          <ion-icon name="ios-bookmark-outline"></ion-icon>
+        </p>
+        <p>Save</p>
+      </div>
+    </div>
+  </div>
+  <ion-segment [(ngModel)]="segmentSelect" color="primary">
+    <ion-segment-button value="friends">Friends</ion-segment-button>
+    <ion-segment-button value="all">All</ion-segment-button>
+    <ion-segment-button value="promotions">Promotions</ion-segment-button>
+    <ion-segment-button value="more">More</ion-segment-button>
+  </ion-segment>
+  <div class="fake-content"></div>
+</ion-content>

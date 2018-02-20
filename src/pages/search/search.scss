@@ -1,0 +1,21 @@
+page-search {
+    ion-item {
+        cursor: pointer;
+    }
+    .scroll-content {
+        overflow-y: auto;
+    }
+    ion-segment {
+        height: 50px;
+        ion-segment-button {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+
+            height: 100% !important;
+            ion-icon {
+                font-size: 2.2rem !important;
+            }
+        }
+    }
+}

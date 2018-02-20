@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>RecommendMe</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-searchbar></ion-searchbar>
+  <ion-segment [(ngModel)]="favoriteSegment">
+    <ion-segment-button value="friend">
+      <ion-icon name="person"></ion-icon>&nbsp;Friend's Favorites </ion-segment-button>
+    <ion-segment-button value="top">
+      <ion-icon name="heart"></ion-icon>&nbsp;Top Favorites </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let merchantInfo of merchantList" (click)="viewMerchant()">
+      <merchant-list-item [merchantInfo]="merchantInfo"></merchant-list-item>
+    </ion-item>
+  </ion-list>
+</ion-content>

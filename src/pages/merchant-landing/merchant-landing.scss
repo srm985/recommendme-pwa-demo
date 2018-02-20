@@ -1,0 +1,107 @@
+page-merchant-landing {
+    .hero {
+        width: 100%;
+        height: 200px;
+        @media only screen and (min-width: 776px) {
+            height: 250px;
+        }
+        @media only screen and (min-width:1024px) {
+            height: 300px;
+        }
+        @media only screen and (min-width: 1200px) {
+            height: 400px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: fill;
+        }
+    }
+    .merchant-header {
+        p {
+            margin: 0 0 3px;
+            &:nth-of-type(1) {
+                font-size: 1.8rem;
+                font-weight: bold;
+
+                display: inline-block;
+
+                color: color($colors, dark, base);
+            }
+            &:nth-of-type(2) {
+                color: color($colors, primary, base);
+            }
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                color: color($colors, secondary, base);
+            }
+        }
+        a {
+            cursor: pointer;
+
+            color: color($colors, secondary, base);
+        }
+        .like-count {
+            position: relative;
+
+            float: right;
+
+            margin-right: 12px;
+            ion-icon {
+                font-size: 2.8rem;
+            }
+            ion-badge {
+                font-size: 1rem;
+                line-height: 1rem;
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                margin-left: 14px;
+                padding: 2px 3px;
+
+                color: color($colors, primary, base);
+                border: solid 1px color($colors, primary, base);
+                background-color: #fff;
+                @media only screen and (max-width: 766px) {
+                    &.badge-md {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .social-actions {
+        display: flex;
+        justify-content: space-around;
+        & > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 50%;
+            & > div {
+                width: auto;
+
+                cursor: pointer;
+            }
+        }
+        ion-icon {
+            font-size: 2.8rem;
+
+            text-align: center;
+        }
+        p {
+            margin: 0;
+
+            text-align: center;
+
+            color: color($colors, light, base);
+        }
+    }
+    .fake-content {
+        height: 700px;
+    }
+}

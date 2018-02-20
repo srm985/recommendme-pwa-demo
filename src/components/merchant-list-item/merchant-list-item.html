@@ -1,0 +1,13 @@
+<ion-img src="/assets/imgs/logo.png"></ion-img>
+<div class="item-info">
+  <p>{{merchantInfo.name}}</p>
+  <p>{{merchantInfo.description}}</p>
+  <p>{{merchantInfo.address}}&nbsp;-&nbsp;{{merchantInfo.distance}}&nbsp;mi</p>
+  <div class="actions">
+    <div class="recommend">
+      <ion-icon [name]="itemLiked ? 'ios-heart' : 'ios-heart-outline'" color="primary" (click)="likeItem($event)"></ion-icon>
+      <ion-badge (click)="likeItem($event)">{{merchantInfo.likedCount}}</ion-badge>
+    </div>
+    <ion-icon [name]="itemBookmarked ? 'ios-bookmark' : 'ios-bookmark-outline'" color="primary" (click)="bookmarkItem($event)"></ion-icon>
+  </div>
+</div>

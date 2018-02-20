@@ -1,0 +1,27 @@
+$segement-border: solid 1px rgba(0, 0, 0, 0.1);
+
+ion-header {
+    ion-searchbar {
+        background-color: color($colors, primary, base) !important;
+    }
+    .toolbar-title {
+        text-align: center;
+    }
+}
+ion-segment {
+    ion-segment-button {
+        color: color($colors, light, base) !important;
+        border-top: 0 !important;
+        border-right: 0 !important;
+        border-bottom: $segement-border !important;
+        border-left: $segement-border !important;
+        border-radius: 0 !important;
+        background-color: #fff !important;
+        &:first-of-type {
+            border-left: 0 !important;
+        }
+        &.segment-activated {
+            border-bottom: solid 4px color($colors, primary, base) !important;
+        }
+    }
+}
